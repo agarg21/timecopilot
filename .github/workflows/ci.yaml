@@ -57,6 +57,7 @@ jobs:
       - name: Run tests 
         run: uv run pytest
         env:
+          OMP_NUM_THREADS: 1
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           TABPFN_TOKEN: ${{ secrets.TABPFN_TOKEN }}
 
